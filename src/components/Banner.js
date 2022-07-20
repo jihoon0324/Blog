@@ -83,9 +83,6 @@ export const Banner = () => {
                     CSS, SQL, PL/SQL, JSP/SERVLET, and I am still trying to
                     develop the knowledge that I know
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
                 </div>
               )}
             </TrackVisibility>

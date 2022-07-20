@@ -68,13 +68,13 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a onClick={() => Newtap("Mailto:Jihoon0324@hotmail.com")}>
+              <a onClick={() => Newtap("https://www.linkedin.com/feed/")}>
                 <img src={navIcon1} alt="" />
               </a>
               <a onClick={() => Newtap("https://github.com/jihoon0324")}>
                 <img src={navIcon2} alt="" />
               </a>
-              <a onClick={() => Newtap("https://www.linkedin.com/feed/")}>
+              <a onClick={() => Newtap("Mailto:Jihoon0324@hotmail.com")}>
                 <img src={navIcon3} alt="" />
               </a>
             </div>

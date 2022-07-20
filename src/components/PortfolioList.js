@@ -1,31 +1,26 @@
-import Newtap from "../../hooks/NewTap";
+import Newtap from "./hooks/NewTap";
 
-export const ProjectsList = [
-  // {
-  //   title: "Business Startup",
-  //   description: "Design & Development",
-  //   imgUrl: projImg1,
-  // },
-
+export const PortfolioList = [
   {
     id: 1,
     type: "All",
     title: "",
     language: "JavaScript",
 
-    img: require("../../../assets/bubble_Game.png"),
+    img: require("../assets/img/portfolio/bubble_Game.png"),
     link: (
       <button onClick={() => Newtap("Mailto:Jihoon0324@hotmail.com")}>
         Restaurant Code
       </button>
     ),
   },
+
   {
     id: 5,
     type: "none",
     title: "Restaurant Menu",
     language: "React",
-    img: require("../../../assets//tetris.png"),
+    img: require("../assets/img/portfolio/tetris.png"),
     link: (
       <button
         onClick={() => Newtap("https://github.com/jihoon0324/Tetris_javascrip")}
@@ -34,12 +29,13 @@ export const ProjectsList = [
       </button>
     ),
   },
+
   {
     id: 6,
     type: "none",
     title: "Restaurant Menu",
-    language: "Javascript",
-    img: require("../../../assets//tetris.png"),
+    language: "React",
+    img: require("../assets/img/portfolio/tetris.png"),
     link: (
       <button
         onClick={() => Newtap("https://github.com/jihoon0324/Tetris_javascrip")}
@@ -54,7 +50,7 @@ export const ProjectsList = [
     title: "Tetris",
     language: "Javascript",
 
-    img: require("../../../assets//tetris.png"),
+    img: require("../assets/img/portfolio/tetris.png"),
     link: (
       <button
         onClick={() => Newtap("https://github.com/jihoon0324/Tetris_javascrip")}
@@ -70,24 +66,24 @@ export const ProjectsList = [
     ),
   },
 
-  {
-    id: 3,
-    type: "All",
-    title: "Blog",
-    language: "React",
-    img: require("../../../assets/blog.png"),
-    link: (
-      <button onClick={() => Newtap("https://github.com/jihoon0324/blog")}>
-        Blog code
-      </button>
-    ),
-  },
+  // {
+  //   id: 3,
+  //   type: "All",
+  //   title: "Blog",
+  //   language: "React",
+  //   img: require("../assets/img/portfolio/blog.png"),
+  //   link: (
+  //     <button onClick={() => Newtap("https://github.com/jihoon0324/blog")}>
+  //       Blog code
+  //     </button>
+  //   ),
+  // },
   {
     id: 4,
     type: "All",
     title: "Bubble Game",
     language: "Java",
-    img: require("../../../assets/bubble_Game.png"),
+    img: require("../assets/img/portfolio/bubble_Game.png"),
     link: (
       <button
         onClick={() =>
