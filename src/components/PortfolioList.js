@@ -9,7 +9,10 @@ export const PortfolioList = [
 
     img: require("../assets/img/portfolio/bubble_Game.png"),
     link: (
-      <button onClick={() => Newtap("Mailto:Jihoon0324@hotmail.com")}>
+      <button
+        className="w-btn"
+        onClick={() => Newtap("Mailto:Jihoon0324@hotmail.com")}
+      >
         Restaurant Code
       </button>
     ),
@@ -53,15 +56,19 @@ export const PortfolioList = [
     img: require("../assets/img/portfolio/tetris.png"),
     link: (
       <button
+        className="w-btn"
         onClick={() => Newtap("https://github.com/jihoon0324/Tetris_javascrip")}
       >
-        JavaScript Code
+        JS Code Link
       </button>
     ),
 
     link2: (
-      <button onClick={() => Newtap("https://github.com/jihoon0324/")}>
-        JavaScript Code
+      <button
+        className="w-btn"
+        onClick={() => Newtap("https://github.com/jihoon0324/")}
+      >
+        React Code Link
       </button>
     ),
   },

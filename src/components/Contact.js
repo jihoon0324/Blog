@@ -47,9 +47,18 @@ export const Contact = () => {
             <TrackVisibility>
               <form ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
-                <input type="text" name="user_name" />
+                <input type="name" name="name" />
+
+                <input
+                  hidden
+                  type="email"
+                  name="user_email"
+                  value="jihoon0324@hotmail.com"
+                />
                 <label>Email</label>
-                <input type="email" name="user_email" />
+                <input type="text" name="email_from" />
+                <labe> phone</labe>
+                <input type="phone" name="phone" />
                 <label>Message</label>
                 <textarea name="message" />
                 <input type="submit" value="Send" />
