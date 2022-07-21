@@ -5,45 +5,6 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
-  // const ProjectsList = [
-  //   // {
-  //   //   title: "Business Startup",
-  //   //   description: "Design & Development",
-  //   //   imgUrl: projImg1,
-  //   // },
-
-  //   {
-  //     id: 1,
-  //     type: "All",
-  //     title: "",
-  //     language: "JavaScript",
-
-  //     img: require("../assets/img/bubble_Game.png"),
-  //     link: (
-  //       <button onClick={() => Newtap("Mailto:Jihoon0324@hotmail.com")}>
-  //         Restaurant Code
-  //       </button>
-  //     ),
-  //   },
-
-  //   {
-  //     id: 5,
-  //     type: "React",
-  //     title: "Restaurant Menu fffff",
-  //     language: "React",
-  //     img: require("../assets/img/tetris.png"),
-  //     link: (
-  //       <button
-  //         onClick={() =>
-  //           Newtap("https://github.com/jihoon0324/Tetris_javascrip")
-  //         }
-  //       >
-  //         Restaurant Menu Code
-  //       </button>
-  //     ),
-  //   },
-  // ];
-
   function filter_test(props) {
     return PortfolioList.filter(
       (Portfolio_List) => Portfolio_List.language === props
@@ -81,10 +42,11 @@ export const Projects = () => {
                         <Nav.Link eventKey="first">All</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="second">React</Nav.Link>
                       </Nav.Item>
+
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third">JavaScript</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content>
