@@ -1,4 +1,4 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab, Nav, Tabs } from "react-bootstrap";
 import { PortfolioList } from "./PortfolioList";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -25,7 +25,48 @@ export const Projects = () => {
   return (
     <section className="project" id="projects">
       <Container>
-        <Row>
+        {" "}
+        <h4>PROJECTS</h4>
+        <Tabs defaultActiveKey="all">
+          <Tab eventKey="all" title="All">
+            {PortfolioList.filter(
+              (Portfolio_List) => Portfolio_List.type === "All"
+            ).map((portfolio) => (
+              <ul className="list_component hover" key={portfolio.id}>
+                <li>
+                  {portfolio.title} <br />
+                  {portfolio.language}
+                  <br />
+                  <img src={portfolio.img} />
+                  {portfolio.link} &nbsp;
+                  {portfolio.link2}
+                </li>
+              </ul>
+            ))}
+          </Tab>
+          <Tab
+            eventKey="Java"
+            title="Java"
+            onEnter={(e) => filter_test("Java")}
+          >
+            {filter_test("Java")}
+          </Tab>
+          <Tab
+            eventKey="Javascript"
+            title="Javascript"
+            onEnter={(e) => filter_test("Javascript")}
+          >
+            {filter_test("Javascript")}
+          </Tab>
+          <Tab
+            eventKey="React"
+            title="React"
+            onEnter={(e) => filter_test("React")}
+          >
+            {filter_test("React")}
+          </Tab>
+        </Tabs>
+        {/* <Row>
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) => (
@@ -87,7 +128,7 @@ export const Projects = () => {
               )}
             </TrackVisibility>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
       <img className="background-image-right" src={colorSharp2}></img>
     </section>

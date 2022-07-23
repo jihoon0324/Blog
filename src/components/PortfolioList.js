@@ -17,6 +17,22 @@ export const PortfolioList = [
       </button>
     ),
   },
+  {
+    id: 1,
+    type: "All",
+    title: "",
+    language: "JavaScript",
+
+    img: require("../assets/img/portfolio/bubble_Game.png"),
+    link: (
+      <button
+        className="w-btn"
+        onClick={() => Newtap("Mailto:Jihoon0324@hotmail.com")}
+      >
+        Restaurant Code
+      </button>
+    ),
+  },
 
   {
     id: 5,
