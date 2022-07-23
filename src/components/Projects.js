@@ -26,9 +26,9 @@ export const Projects = () => {
     <section className="project" id="projects">
       <Container>
         {" "}
-        <h4>PROJECTS</h4>
-        <Tabs defaultActiveKey="all">
-          <Tab eventKey="all" title="All">
+        <h2>PROJECTS</h2>
+        <Tabs className="tabsCss" defaultActiveKey="all">
+          <Tab className="tabCss" eventKey="all" title="All">
             {PortfolioList.filter(
               (Portfolio_List) => Portfolio_List.type === "All"
             ).map((portfolio) => (
