@@ -1,9 +1,9 @@
-import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-me.svg";
-import "animate.css";
-import TrackVisibility from "react-on-screen";
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { Container, Row, Col } from 'react-bootstrap';
+import contactImg from '../assets/img/contact-me.svg';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 export const Contact = () => {
   const form = useRef();
 
@@ -12,10 +12,10 @@ export const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_y8dgo6a",
-        "template_eflgbx9",
+        'service_y8dgo6a',
+        'template_eflgbx9',
         form.current,
-        "7DXLzj4fgU4tEmG1M"
+        '7DXLzj4fgU4tEmG1M'
       )
       .then(
         (result) => {
@@ -27,18 +27,18 @@ export const Contact = () => {
       );
   };
   return (
-    <section className="contact" id="connect">
+    <section className='contact' id='connect'>
       <Container>
-        <Row className="align-items-center">
+        <Row className='align-items-center'>
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <img
                   className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
+                    isVisible ? 'animate__animated animate__zoomIn' : ''
                   }
                   src={contactImg}
-                  alt="Contact Us"
+                  alt='Contact Us'
                 />
               )}
             </TrackVisibility>
@@ -47,21 +47,21 @@ export const Contact = () => {
             <TrackVisibility>
               <form ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
-                <input type="name" name="name" />
+                <input type='name' name='name' />
 
                 <input
                   hidden
-                  type="email"
-                  name="user_email"
-                  value="jihoon0324@hotmail.com"
+                  type='email'
+                  name='user_email'
+                  value='jihoon0324oh@gmail.com'
                 />
                 <label>Email</label>
-                <input type="text" name="email_from" />
+                <input type='text' name='email_from' />
                 <labe> phone</labe>
-                <input type="phone" name="phone" />
+                <input type='phone' name='phone' />
                 <label>Message</label>
-                <textarea name="message" />
-                <input type="submit" value="Send" />
+                <textarea name='message' />
+                <input type='submit' value='Send' />
               </form>
             </TrackVisibility>
           </Col>
