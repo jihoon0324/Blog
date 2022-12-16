@@ -1,38 +1,37 @@
-import { Container, Row, Col, Tab, Nav, Tabs } from "react-bootstrap";
-import { PortfolioList } from "./PortfolioList";
-import colorSharp2 from "../assets/img/color-sharp2.png";
-import "animate.css";
-import TrackVisibility from "react-on-screen";
+import { Container, Row, Col, Tab, Nav, Tabs } from 'react-bootstrap';
+import { PortfolioList } from './PortfolioList';
+import colorSharp2 from '../assets/img/color-sharp2.png';
+import 'animate.css';
 
 export const Projects = () => {
   function filter_test(props) {
     return PortfolioList.filter(
-      (Portfolio_List) => Portfolio_List.language === props
+      (Portfolio_List) => Portfolio_List.type === props
     ).map((portfolio) => (
-      <ul className="list_component hover" key={portfolio.id}>
-        <li>
-          {portfolio.title} <br />
-          {portfolio.language}
+      <div className='list_component hover' key={portfolio.id}>
+        <ul>
+          <li> {portfolio.title} </li>
           <br />
-          <img src={portfolio.img} />
-          {portfolio.link}
+          <li> {portfolio.language}</li>
           <br />
-        </li>
-      </ul>
+          <li>
+            <img src={portfolio.img} />
+          </li>
+          <li> {portfolio.link}</li>
+          <br />
+        </ul>
+      </div>
     ));
   }
 
   return (
-    <section className="project" id="projects">
+    <section className='project' id='projects'>
       <Container>
-        {" "}
         <h2>PROJECTS</h2>
-        <Tabs className="tabsCss" defaultActiveKey="all">
-          <Tab className="tabCss" eventKey="all" title="All">
-            {PortfolioList.filter(
-              (Portfolio_List) => Portfolio_List.type === "All"
-            ).map((portfolio) => (
-              <ul className="list_component hover" key={portfolio.id}>
+        <Tabs className='tabsCss' defaultActiveKey='all'>
+          <Tab className='tabCss' eventKey='all' title='All'>
+            {PortfolioList.map((portfolio) => (
+              <ul className='list_component hover' key={portfolio.id}>
                 <li>
                   {portfolio.title} <br />
                   {portfolio.language}
@@ -45,92 +44,23 @@ export const Projects = () => {
             ))}
           </Tab>
           <Tab
-            eventKey="Java"
-            title="Java"
-            onEnter={(e) => filter_test("Java")}
+            eventKey='Group'
+            title='Group'
+            onEnter={(e) => filter_test('Group')}
           >
-            {filter_test("Java")}
+            {filter_test('Group')}
           </Tab>
+
           <Tab
-            eventKey="Javascript"
-            title="Javascript"
-            onEnter={(e) => filter_test("Javascript")}
+            eventKey='Personal'
+            title='Personal'
+            onEnter={(e) => filter_test('Personal')}
           >
-            {filter_test("Javascript")}
-          </Tab>
-          <Tab
-            eventKey="React"
-            title="React"
-            onEnter={(e) => filter_test("React")}
-          >
-            {filter_test("React")}
+            {filter_test('Personal')}
           </Tab>
         </Tabs>
-        {/* <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div>
-                  <h2>Projects</h2>
-
-                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Nav
-                      variant="pills"
-                      className="nav-pills mb-5 justify-content-center align-items-center"
-                      id="pills-tab"
-                    >
-                      <Nav.Item>
-                        <Nav.Link eventKey="first">All</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="second">React</Nav.Link>
-                      </Nav.Item>
-
-                      <Nav.Item>
-                        <Nav.Link eventKey="third">JavaScript</Nav.Link>
-                      </Nav.Item>
-                    </Nav>
-                    <Tab.Content>
-                      <Tab.Pane eventKey="first">
-                        <Col className="test">
-                          {PortfolioList.filter(
-                            (Portfolio_List) => Portfolio_List.type === "All"
-                          ).map((portfolio) => (
-                            <ul
-                              className="list_component hover"
-                              key={portfolio.id}
-                            >
-                              <li>
-                                {portfolio.title} <br />
-                                {portfolio.language}
-                                <br />
-                                <img src={portfolio.img} />
-                                {portfolio.link} &nbsp;
-                                {portfolio.link2}
-                              </li>
-                            </ul>
-                          ))}
-                        </Col>
-                      </Tab.Pane>
-                      <Tab.Pane
-                        eventKey="second"
-                        title="Java"
-                        onEnter={(e) => filter_test("React")}
-                      >
-                        <Col className="test">{filter_test("React")}</Col>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <p>pppppppppppppppppppp</p>
-                      </Tab.Pane>
-                    </Tab.Content>
-                  </Tab.Container>
-                </div>
-              )}
-            </TrackVisibility>
-          </Col>
-        </Row> */}
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className='background-image-right' src={colorSharp2}></img>
     </section>
   );
 };
