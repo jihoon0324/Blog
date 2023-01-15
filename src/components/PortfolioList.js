@@ -1,20 +1,20 @@
-import Newtap from './hooks/NewTap';
-import '../App.css';
+import Newtap from "./hooks/NewTap";
+import "../App.css";
 
 export const PortfolioList = [
   {
     id: 1,
-    type: 'Group',
-    title: 'Medical-Appointment',
-    language: 'Java',
+    type: "Group",
+    title: "Medical-Appointment",
+    language: "Java",
 
-    img: require('../assets/img/portfolio/bubble_Game.png'),
+    img: require("../assets/img/portfolio/medical.png"),
     link: (
       <button
-        className='w-btn button_Profile'
-        style={{ color: 'blue' }}
+        className="w-btn button_Profile"
+        style={{ color: "blue" }}
         onClick={() =>
-          Newtap('https://github.com/jihoon0324/Medical-Appointment')
+          Newtap("https://github.com/jihoon0324/Medical-Appointment")
         }
       >
         Code Detail
@@ -23,16 +23,16 @@ export const PortfolioList = [
   },
   {
     id: 2,
-    type: 'Group',
-    title: 'Team_Collaboration_Tool',
-    language: 'React',
+    type: "Group",
+    title: "Team_Collaboration_Tool",
+    language: "React",
 
-    img: require('../assets/img/portfolio/Ktc_collaboration.png'),
+    img: require("../assets/img/portfolio/Ktc_collaboration.png"),
     link: (
       <button
-        className='w-btn button_Profile'
-        style={{ color: 'blue' }}
-        onClick={() => Newtap('https://github.com/Jonghan-park/KillTheCode')}
+        className="w-btn button_Profile"
+        style={{ color: "blue" }}
+        onClick={() => Newtap("https://github.com/Jonghan-park/KillTheCode")}
       >
         Code Detail
       </button>
@@ -40,28 +40,65 @@ export const PortfolioList = [
   },
 
   {
-    id: 2,
-    type: 'Personal',
-    title: 'Kiosk',
-
-    img: require('../assets/img/portfolio/tetris.png'),
+    id: 3,
+    type: "Personal",
+    title: "Coffee Store",
+    language: "React",
+    img: require("../assets/img/portfolio/coff_main.png"),
     link: (
       <button
-        className='w-btn button_Profile'
-        style={{ color: 'blue' }}
-        onClick={() => Newtap('https://github.com/jihoon0324/Tetris_javascrip')}
+        className="w-btn button_Profile"
+        style={{ color: "blue" }}
+        onClick={() => Newtap("https://https://github.com/jihoon0324/cart ")}
       >
-        JS Code Link
+        Code Detail
       </button>
     ),
 
     link2: (
       <button
-        className='w-btn button_Profile'
-        style={{ color: 'blue' }}
-        onClick={() => Newtap('https://github.com/jihoon0324/')}
+        className="w-btn button_Profile"
+        style={{ color: "blue" }}
+        onClick={() => Newtap(" https://jihoon-coffee.netlify.app/")}
       >
-        React Code Link
+        Demo
+      </button>
+    ),
+  },
+
+  {
+    id: 4,
+    type: "Personal",
+    title: "Instagram",
+    language: "Python Django",
+
+    img: require("../assets/img/portfolio/instagram.png"),
+    link: (
+      <button
+        className="w-btn button_Profile"
+        style={{ color: "blue" }}
+        onClick={() => Newtap("https://github.com/jihoon0324/Instagram_clone")}
+      >
+        Code Detail
+      </button>
+    ),
+  },
+  {
+    id: 5,
+    type: "Personal",
+    title: "Management System",
+    language: "Python Django",
+
+    img: require("../assets/img/portfolio/management_sys.png"),
+    link: (
+      <button
+        className="w-btn button_Profile"
+        style={{ color: "blue" }}
+        onClick={() =>
+          Newtap("https://github.com/jihoon0324/management_system")
+        }
+      >
+        Code Detail
       </button>
     ),
   },
